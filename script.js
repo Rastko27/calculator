@@ -60,6 +60,11 @@ let seven = document.getElementById("seven");
 let eight = document.getElementById("eight");
 let nine = document.getElementById("nine");
 
+let addButton = document.getElementById("add");
+let subtractButton = document.getElementById("subtract");
+let multiplyButton = document.getElementById("multiply");
+let divideButton = document.getElementById("divide");
+
 one.addEventListener("click", () => display("1"));
 two.addEventListener("click", () => display("2"));
 three.addEventListener("click", () => display("3"));
@@ -69,3 +74,8 @@ six.addEventListener("click", () => display("6"));
 seven.addEventListener("click", () => display("7"));
 eight.addEventListener("click", () => display("8"));
 nine.addEventListener("click", () => display("9"));
+
+addButton.addEventListener("click", () => display("+"));
+subtractButton.addEventListener("click", () => display("-"));
+multiplyButton.addEventListener("click", () => display("*"));
+divideButton.addEventListener("click", () => display("/"));
