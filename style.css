@@ -2,6 +2,9 @@ body{
     width: 100vw;
     height: 100vh;
     margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button{
@@ -82,6 +85,7 @@ button{
     border-color: black;
     border-radius: 5px;
     margin-bottom: 10px;
+    background-color: white;
 }
 
 .display-text{
@@ -89,14 +93,21 @@ button{
 }
 
 .clear{
-    width: 100%;
-    margin-top: 10px;
-    font-size: 20px;
+    width: 50%;
+    font-size: 15px;
     padding: 10px;
 }
 
 .calculator-wrapper{
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    background-color: darkseagreen;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
 }
 
 .zero-wrapper{
@@ -125,4 +136,34 @@ button{
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.heading{
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+.credit{
+    position: absolute;
+    bottom: 3vh;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.clear-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.backspace{
+    width: 50%;
+    font-size: 15px;
+    padding: 10px;
 }
