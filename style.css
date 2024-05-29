@@ -60,7 +60,7 @@ button{
 }
 
 .display{
-    width: 100%;
+    width: 193px;
     height: 65px;
     display: flex;
     justify-content: flex-end;
@@ -80,6 +80,16 @@ button{
 .clear{
     width: 100%;
     margin-top: 10px;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.calculator-wrapper{
+    max-width: 197px;
+    overflow: hidden;
+}
+
+.zero{
     font-size: 25px;
     padding: 10px;
 }

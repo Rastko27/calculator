@@ -37,7 +37,12 @@ function operate(number1, operator, number2){
         case '*':
             return multiply(number1,number2);
         case '/':
-            return divide(number1,number2);
+            if(number2 === 0){
+                return "CANNOT DIVIDE BY 0";
+            }
+            else{
+                return divide(number1,number2);
+            }
     }
 }
 
@@ -59,6 +64,7 @@ let six = document.getElementById("six");
 let seven = document.getElementById("seven");
 let eight = document.getElementById("eight");
 let nine = document.getElementById("nine");
+let zero = document.getElementById("zero");
 
 let addButton = document.getElementById("add");
 let subtractButton = document.getElementById("subtract");
@@ -74,8 +80,50 @@ six.addEventListener("click", () => display("6"));
 seven.addEventListener("click", () => display("7"));
 eight.addEventListener("click", () => display("8"));
 nine.addEventListener("click", () => display("9"));
+zero.addEventListener("click", () => display("0"));
 
-addButton.addEventListener("click", () => display("+"));
-subtractButton.addEventListener("click", () => display("-"));
-multiplyButton.addEventListener("click", () => display("*"));
-divideButton.addEventListener("click", () => display("/"));
+function clearDisplay(){
+    displayValue = "";
+    displayText.textContent = displayValue;
+}
+
+function handleOperator(op) {
+    number1 = parseFloat(displayValue);
+    operator = op;
+    display(op);  // Display the operator
+    displayValue = "";  // Reset displayValue to capture number2
+}
+
+addButton.addEventListener("click", () => handleOperator("+"));
+subtractButton.addEventListener("click", () => handleOperator("-"));
+multiplyButton.addEventListener("click", () => handleOperator("*"));
+divideButton.addEventListener("click", () => handleOperator("/"));
+
+function getNumberTwo() {
+    number2 = parseFloat(displayValue);
+}
+
+let equals = document.getElementById("equals");
+
+equals.addEventListener("click", () => {
+    getNumberTwo();
+    let result = operate(number1, operator, number2);
+    if(typeof result === 'number' && !Number.isInteger(result)){
+        result.toFixed(3);
+    }
+    displayValue = result.toString();
+    displayText.textContent = displayValue;
+});
+
+let clear = document.getElementById("clear");
+
+function clearVariables(){
+    number1 = undefined;
+    number2 = undefined;
+    operator = "";
+}
+
+clear.addEventListener("click", () => {
+    clearDisplay();
+    clearVariables();
+});
