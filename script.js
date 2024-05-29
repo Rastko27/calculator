@@ -127,3 +127,14 @@ clear.addEventListener("click", () => {
     clearDisplay();
     clearVariables();
 });
+
+let point = document.getElementById("point");
+
+function displayPoint(){
+    if(!displayValue.includes(".")){
+        displayValue += '.';
+    }
+    displayText.textContent = displayValue;
+}
+
+point.addEventListener("click",() => displayPoint());
