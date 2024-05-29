@@ -86,10 +86,14 @@ button{
     border-radius: 5px;
     margin-bottom: 10px;
     background-color: white;
+    padding: 10px;
 }
 
 .display-text{
-    padding: 10px;
+    width: 100%;
+    text-align: end;
+    max-width: 186px;
+    overflow: hidden;
 }
 
 .clear{
