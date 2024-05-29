@@ -185,6 +185,33 @@ function handleKeyPress(event){
         case "9":
             display("9");
             break;
+        case ".":
+            displayPoint();
+            break;
+        case "+":
+            handleOperator("+")
+            break;
+        case "-":
+            handleOperator("-")
+            break;
+        case "*":
+            handleOperator("*")
+            break;
+        case "/":
+            handleOperator("/")
+            break;
+        case "Enter":
+            getNumberTwo();
+            let result = operate(number1, operator, number2);
+            if(typeof result === 'number' && !Number.isInteger(result)){
+                result.toFixed(3);
+            }
+            displayValue = result.toString();
+            displayText.textContent = displayValue;
+            break;
+        case "Backspace":
+            deleteCharacter();
+            break;
         default:
             break;
     }
