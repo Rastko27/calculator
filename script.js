@@ -100,7 +100,12 @@ multiplyButton.addEventListener("click", () => handleOperator("*"));
 divideButton.addEventListener("click", () => handleOperator("/"));
 
 function getNumberTwo() {
-    number2 = parseFloat(displayValue);
+    if(displayValue === ""){
+        number2 = 0;
+    }
+    else{
+        number2 = parseFloat(displayValue);
+    }
 }
 
 let equals = document.getElementById("equals");
@@ -138,3 +143,12 @@ function displayPoint(){
 }
 
 point.addEventListener("click",() => displayPoint());
+
+let backspace = document.getElementById("backspace");
+
+function deleteCharacter(){
+    displayValue = displayValue.slice(0,-1);
+    displayText.textContent = displayValue;
+}
+
+backspace.addEventListener("click", () => deleteCharacter());
