@@ -27,14 +27,14 @@ button{
 
 .inner-wrapper{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
 
 .button{
-    font-size: 25px;
-    padding: 15px 20px;
+    font-size: 20px;
+    padding: 10px 15px;
 }
 
 .function-wrapper{
@@ -48,24 +48,24 @@ button{
 
 .function-button{
     width: 50%;
-    font-size: 25px;
-    padding: 10px;
+    font-size: 20px;
+    padding: 5px;
 }
 
 .equals{
     width: 100%;
     margin-top: 10px;
-    font-size: 25px;
-    padding: 10px;
+    font-size: 20px;
+    padding: 5px;
 }
 
 .display{
-    width: 193px;
+    width: 156px;
     height: 65px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-size: 25px;
+    font-size: 20px;
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -80,8 +80,8 @@ button{
 .clear{
     width: 100%;
     margin-top: 10px;
-    font-size: 25px;
-    padding: 10px;
+    font-size: 20px;
+    padding: 5px;
 }
 
 .calculator-wrapper{
@@ -90,6 +90,6 @@ button{
 }
 
 .zero{
-    font-size: 25px;
-    padding: 10px;
+    font-size: 20px;
+    padding: 5px;
 }
